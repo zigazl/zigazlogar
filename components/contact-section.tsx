@@ -51,21 +51,13 @@ export function ContactSection({ contact }: ContactProps) {
                 </a>
               </div>
             </div>
-            <div className="mt-6 flex flex-col items-stretch justify-center gap-3 sm:mt-8 sm:items-center sm:gap-4 sm:flex-row">
+            <div className="mt-6 flex justify-center sm:mt-8">
               <a
                 href="/ziga-zlogar-cv.pdf"
                 download
                 className="btn-primary w-full sm:w-auto"
               >
                 Download CV
-              </a>
-              <a
-                href={contact.linkedin}
-                target="_blank"
-                rel="noreferrer"
-                className="btn-secondary w-full sm:w-auto"
-              >
-                LinkedIn
               </a>
             </div>
           </div>
