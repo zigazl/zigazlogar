@@ -60,6 +60,11 @@ export const siteContent = {
       description:
         "I use reporting, analytics, and structured information to support clearer visibility and more informed decisions.",
     },
+    {
+      title: "Software Development",
+      description:
+        "I’m enthusiastic about software development and enjoy learning how systems are built in practice. I like improving my coding skills and understanding how software solutions come together from both a technical and business perspective.",
+    },
   ],
   experience: [
     {
