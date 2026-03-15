@@ -142,6 +142,7 @@ export const siteContent = {
   contact: {
     email: "zlogar.ziga@gmail.com",
     linkedin: "https://www.linkedin.com/in/zigazlogar-it/",
+    github: "https://github.com/zigazl",
     cta: "This site is a simple introduction to the kind of work I do and how I approach digital projects.",
     closing:
       "If you’d like to connect, collaborate, or discuss digital projects, feel free to reach out.",
