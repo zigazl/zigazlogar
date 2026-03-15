@@ -32,7 +32,7 @@ export function AboutSection({ about }: AboutProps) {
             <div className="absolute inset-0 grid-overlay opacity-20" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(138,167,209,0.12),transparent_40%),linear-gradient(180deg,rgba(255,255,255,0.72),rgba(255,255,255,0.48))]" />
             <div className="relative space-y-8">
-              <div className="flex items-center justify-between">
+              <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between">
                 <span className="text-[11px] uppercase tracking-[0.22em] text-muted">Operating model</span>
                 <span className="rounded-full border border-slate-200 bg-white px-3 py-1 text-xs text-muted">
                   Business ↔ Technology
@@ -46,7 +46,7 @@ export function AboutSection({ about }: AboutProps) {
                 ].map(([title, copy]) => (
                   <div key={title} className="interactive-card rounded-[24px] border border-slate-200 bg-white/75 p-4 md:rounded-[26px] md:p-5">
                     <p className="text-sm font-semibold text-text">{title}</p>
-                    <p className="mt-2 text-sm leading-7 text-muted">{copy}</p>
+                    <p className="mt-2 text-sm leading-6 text-muted md:leading-7">{copy}</p>
                   </div>
                 ))}
               </div>
@@ -57,9 +57,9 @@ export function AboutSection({ about }: AboutProps) {
                   <div className="h-2 w-2 rounded-full bg-accentBlue" />
                 </div>
                 <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-3 md:mt-6">
-                  <div className="rounded-2xl border border-slate-200 p-4 text-sm text-muted">Clarity</div>
-                  <div className="rounded-2xl border border-slate-200 p-4 text-sm text-muted">Structure</div>
-                  <div className="rounded-2xl border border-slate-200 p-4 text-sm text-muted">Usefulness</div>
+                  <div className="rounded-2xl border border-slate-200 p-3.5 text-sm text-muted md:p-4">Clarity</div>
+                  <div className="rounded-2xl border border-slate-200 p-3.5 text-sm text-muted md:p-4">Structure</div>
+                  <div className="rounded-2xl border border-slate-200 p-3.5 text-sm text-muted md:p-4">Usefulness</div>
                 </div>
               </div>
             </div>

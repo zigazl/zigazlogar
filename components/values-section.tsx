@@ -17,8 +17,8 @@ export function ValuesSection({ values }: ValuesProps) {
         title={values.title}
         copy="A simple approach shaped by practical solutions, clarity over complexity, and technology that works well for people over time."
       />
-      <div className="grid items-center gap-8 md:gap-12 lg:grid-cols-[0.95fr_1.05fr]">
-        <Reveal>
+      <div className="grid items-center gap-6 md:gap-12 lg:grid-cols-[0.95fr_1.05fr]">
+        <Reveal className="order-2 lg:order-1">
           <div className="panel relative overflow-hidden p-6 md:p-10">
             <div className="absolute inset-0 grid-overlay opacity-20" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(138,167,209,0.12),transparent_36%)]" />
@@ -36,8 +36,8 @@ export function ValuesSection({ values }: ValuesProps) {
             </div>
           </div>
         </Reveal>
-        <Reveal delay={0.08}>
-          <div className="space-y-4 md:space-y-6">
+        <Reveal delay={0.08} className="order-1 lg:order-2">
+          <div className="space-y-3.5 md:space-y-6">
             {values.paragraphs.map((paragraph, index) => (
               <div key={paragraph} className="panel interactive-card p-5 md:p-7">
                 <p className="text-[11px] uppercase tracking-[0.22em] text-text/40">

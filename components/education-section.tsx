@@ -18,11 +18,11 @@ export function EducationSection({ items }: { items: readonly EducationItem[] })
         title="A solid academic and practical background"
         copy="My education supports my practical experience with a strong grounding in informatics, digitalization, and the broader context of how technology is used in organizations."
       />
-      <div className="space-y-4 md:space-y-6">
+      <div className="space-y-3.5 md:space-y-6">
         {items.map((item, index) => (
           <Reveal key={`${item.institution}-${item.period}`} delay={index * 0.06}>
-            <article className="panel interactive-card grid gap-5 p-5 md:grid-cols-[84px_1fr_0.9fr] md:items-start md:gap-6 md:p-9">
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-slate-200 bg-slate-50 text-base text-text/70 md:h-14 md:w-14 md:text-lg">
+            <article className="panel interactive-card grid gap-4 p-5 md:grid-cols-[84px_1fr_0.9fr] md:items-start md:gap-6 md:p-9">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-slate-200 bg-slate-50 text-base text-text/70 md:h-14 md:w-14 md:text-lg">
                 {index === 0 ? "M" : index === 1 ? "B" : "P"}
               </div>
               <div>

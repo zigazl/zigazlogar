@@ -57,7 +57,7 @@ export function HeroSection({ hero }: HeroProps) {
             initial={reduceMotion ? undefined : { opacity: 0, y: 16 }}
             animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="eyebrow"
+            className="eyebrow max-w-[18rem] leading-5 md:max-w-none"
           >
             {hero.eyebrow}
           </motion.span>
@@ -65,7 +65,7 @@ export function HeroSection({ hero }: HeroProps) {
             initial={reduceMotion ? undefined : { opacity: 0, y: 12 }}
             animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
             transition={{ duration: 0.72, delay: 0.03 }}
-            className="mb-3 font-display text-[1.75rem] tracking-[-0.04em] text-text md:mb-4 md:text-3xl"
+            className="mb-3 font-display text-[1.55rem] tracking-[-0.04em] text-text md:mb-4 md:text-3xl"
           >
             {hero.name}
           </motion.p>
@@ -73,7 +73,7 @@ export function HeroSection({ hero }: HeroProps) {
             initial={reduceMotion ? undefined : { opacity: 0, y: 18 }}
             animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.04 }}
-            className="font-display text-[2.5rem] font-semibold leading-[0.96] tracking-[-0.065em] text-text sm:text-[2.9rem] md:text-[5rem] xl:text-[5.45rem]"
+            className="max-w-[12ch] font-display text-[2.35rem] font-semibold leading-[0.97] tracking-[-0.065em] text-text sm:max-w-none sm:text-[2.9rem] md:text-[5rem] xl:text-[5.45rem]"
           >
             {hero.headline}
           </motion.h1>
@@ -115,12 +115,12 @@ export function HeroSection({ hero }: HeroProps) {
             initial={reduceMotion ? undefined : { opacity: 0, y: 18 }}
             animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
             transition={{ duration: 0.95, delay: 0.22 }}
-            className="mt-10 grid gap-3 sm:mt-14 sm:grid-cols-3"
+            className="mt-10 grid gap-2.5 sm:mt-14 sm:grid-cols-3 sm:gap-3"
           >
             {hero.stats.map((item) => (
               <div
                 key={item}
-                className="rounded-[22px] border border-slate-200 bg-white/88 px-4 py-4 text-sm leading-6 text-muted shadow-soft md:rounded-[24px]"
+                className="rounded-[20px] border border-slate-200 bg-white/88 px-4 py-3.5 text-sm leading-6 text-muted shadow-soft md:rounded-[24px] md:py-4"
               >
                 {item}
               </div>
