@@ -16,7 +16,7 @@ export function SectionIntro({
   const alignment = align === "center" ? "mx-auto text-center" : "";
 
   return (
-    <Reveal className={`mb-14 max-w-3xl ${alignment}`}>
+    <Reveal className={`mb-10 md:mb-14 max-w-3xl ${alignment}`}>
       <span className="eyebrow">{eyebrow}</span>
       <h2 className="section-title">{title}</h2>
       {copy ? <p className="section-copy mt-6">{copy}</p> : null}

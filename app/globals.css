@@ -39,11 +39,11 @@ a {
 
 @layer components {
   .shell {
-    @apply mx-auto w-full max-w-content px-6 md:px-10;
+    @apply mx-auto w-full max-w-content px-5 sm:px-6 md:px-10;
   }
 
   .section {
-    @apply shell relative py-24 md:py-32;
+    @apply shell relative py-20 md:py-32;
   }
 
   .section-card {
@@ -51,11 +51,11 @@ a {
   }
 
   .eyebrow {
-    @apply mb-5 inline-block text-[11px] font-semibold uppercase tracking-eyebrow text-muted;
+    @apply mb-4 inline-block text-[11px] font-semibold uppercase tracking-eyebrow text-muted;
   }
 
   .section-title {
-    @apply font-display text-[2rem] font-semibold tracking-[-0.045em] text-text md:text-[3.4rem];
+    @apply font-display text-[1.9rem] font-semibold tracking-[-0.045em] text-text md:text-[3.4rem];
   }
 
   .section-copy {
@@ -71,15 +71,15 @@ a {
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-accentDeep;
+    @apply inline-flex min-h-12 items-center justify-center rounded-full bg-accent px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-accentDeep;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-6 py-3 text-sm font-semibold text-text transition-all duration-300 hover:border-accent/60 hover:bg-slate-50;
+    @apply inline-flex min-h-12 items-center justify-center rounded-full border border-slate-200 bg-white px-6 py-3.5 text-sm font-semibold text-text transition-all duration-300 hover:border-accent/60 hover:bg-slate-50;
   }
 
   .btn-ghost {
-    @apply inline-flex items-center justify-center rounded-full border border-accent/20 bg-accent/10 px-6 py-3 text-sm font-semibold text-accentDeep transition-all duration-300 hover:border-accent/35 hover:bg-accent/15;
+    @apply inline-flex min-h-12 items-center justify-center rounded-full border border-accent/20 bg-accent/10 px-6 py-3.5 text-sm font-semibold text-accentDeep transition-all duration-300 hover:border-accent/35 hover:bg-accent/15;
   }
 
   .interactive-card {

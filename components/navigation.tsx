@@ -19,7 +19,7 @@ export function Navigation() {
       transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
       className="sticky top-0 z-50 border-b border-slate-200/80 bg-[rgba(252,253,255,0.86)] backdrop-blur-2xl"
     >
-      <div className="shell flex items-center justify-between gap-6 py-4">
+      <div className="shell flex items-center justify-between gap-4 py-3 md:py-4">
         <a href="#hero" className="font-display text-sm font-semibold uppercase tracking-[0.26em] text-text">
           ZZ
         </a>
@@ -40,6 +40,19 @@ export function Navigation() {
         >
           Contact
         </a>
+      </div>
+      <div className="shell -mx-5 overflow-x-auto px-5 pb-3 lg:hidden">
+        <nav aria-label="Mobile section links" className="flex min-w-max gap-2">
+          {links.map(([label, href]) => (
+            <a
+              key={href}
+              href={href}
+              className="inline-flex min-h-10 items-center rounded-full border border-slate-200 bg-white/90 px-4 text-sm text-muted transition-colors duration-300 hover:border-accent/50 hover:text-text"
+            >
+              {label}
+            </a>
+          ))}
+        </nav>
       </div>
     </motion.header>
   );

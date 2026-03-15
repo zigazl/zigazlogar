@@ -20,13 +20,13 @@ export function ExperienceSection({ items }: { items: readonly ExperienceItem[] 
       />
       <div className="relative mt-2">
         <div className="absolute left-4 top-0 hidden h-full w-px bg-gradient-to-b from-accent/50 via-slate-300 to-transparent md:block" />
-        <div className="space-y-8">
+        <div className="space-y-5 md:space-y-8">
           {items.map((item, index) => {
             const isCurrent = index === 0;
 
             return (
               <Reveal key={`${item.role}-${item.company}`} delay={index * 0.07}>
-                <article className="grid gap-5 md:grid-cols-[48px_1fr] md:gap-8">
+                <article className="grid gap-4 md:grid-cols-[48px_1fr] md:gap-8">
                   <div className="hidden md:flex md:justify-center">
                     <div
                       className={`mt-10 h-8 w-8 rounded-full border ${
@@ -37,12 +37,12 @@ export function ExperienceSection({ items }: { items: readonly ExperienceItem[] 
                     />
                   </div>
                   <div
-                    className={`panel relative overflow-hidden p-7 md:p-9 ${
+                    className={`panel relative overflow-hidden p-5 md:p-9 ${
                       isCurrent ? "border-accent/30 bg-[linear-gradient(180deg,rgba(243,247,253,0.96),rgba(255,255,255,0.96))]" : ""
                     } interactive-card`}
                   >
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(138,167,209,0.12),transparent_36%)]" />
-                    <div className="relative grid gap-6 md:grid-cols-[1fr_230px]">
+                    <div className="relative grid gap-4 md:gap-6 md:grid-cols-[1fr_230px]">
                       <div>
                         <div className="flex flex-wrap items-center gap-3">
                           <p className="text-sm uppercase tracking-[0.18em] text-muted">{item.period}</p>
@@ -52,14 +52,14 @@ export function ExperienceSection({ items }: { items: readonly ExperienceItem[] 
                             </span>
                           ) : null}
                         </div>
-                        <h3 className="mt-4 font-display text-2xl font-semibold tracking-[-0.04em] text-text md:text-3xl">
+                        <h3 className="mt-3 font-display text-[1.6rem] font-semibold tracking-[-0.04em] text-text md:mt-4 md:text-3xl">
                           {item.role}
                         </h3>
                         <p className="mt-2 text-base text-text/70">{item.company}</p>
-                        <p className="mt-5 max-w-2xl text-base leading-8 text-muted md:max-w-[42rem]">{item.description}</p>
+                        <p className="mt-4 max-w-2xl text-[1rem] leading-7 text-muted md:mt-5 md:max-w-[42rem] md:text-base md:leading-8">{item.description}</p>
                       </div>
                       <div className="md:pl-4">
-                        <div className="rounded-[24px] border border-slate-200 bg-white/80 px-5 py-4 text-sm leading-7 text-muted">
+                        <div className="rounded-[20px] border border-slate-200 bg-white/80 px-4 py-3 text-sm leading-6 text-muted md:rounded-[24px] md:px-5 md:py-4 md:leading-7">
                           {item.location}
                         </div>
                       </div>

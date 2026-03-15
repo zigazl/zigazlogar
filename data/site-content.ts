@@ -27,11 +27,11 @@ export const siteContent = {
     third: "I’m interested in systems that stay useful over time.",
   },
   about: {
-    title: "Hi, I’m Žiga",
+    title: "How I work",
     paragraphs: [
-      "I work at the intersection of business processes and technology. In my work I focus on helping organizations introduce digital solutions that are clear, practical, and useful in everyday work.",
-      "Across IT projects, business analysis, and solution design, I try to simplify complexity and turn ideas into working systems.",
-      "I’m particularly interested in responsible digitalization, process improvement, and building systems that people can actually use and trust.",
+      "In my work, I try to bring structure to situations that can easily become unclear or overly complicated.",
+      "I usually work somewhere between business needs, processes, and implementation. I like making things understandable, aligning people around the same goal, and helping ideas move forward in a practical way.",
+      "What matters most to me is usefulness. I’m interested in digital solutions that fit real work, reduce friction, and stay valuable over time.",
     ],
   },
   whatIDo: [
