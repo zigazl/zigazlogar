@@ -17,7 +17,6 @@ export function AboutSection({ about }: AboutProps) {
           <SectionIntro
             eyebrow="How I Work"
             title={about.title}
-            copy="After the introduction, this section explains the way I approach projects, collaboration, and practical digital work."
           />
           <div className="space-y-6">
             {about.paragraphs.map((paragraph, index) => (
