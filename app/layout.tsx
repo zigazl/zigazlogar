@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import "./globals.css";
+import { siteContent } from "@/data/site-content";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://example.com"),
@@ -31,6 +32,31 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: siteContent.hero.name,
+  jobTitle: "IT Project Manager",
+  description: siteContent.intro.paragraphs[0],
+  url: "https://example.com", // TODO: update to production URL before launch
+  email: siteContent.contact.email,
+  sameAs: [siteContent.contact.linkedin, siteContent.contact.github],
+  worksFor: {
+    "@type": "Organization",
+    name: siteContent.experience[0].company,
+  },
+  alumniOf: [
+    {
+      "@type": "EducationalOrganization",
+      name: siteContent.education[0].institution,
+    },
+    {
+      "@type": "EducationalOrganization",
+      name: siteContent.education[1].institution,
+    },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -38,6 +64,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="bg-canvas font-sans text-text antialiased">{children}</body>
     </html>
   );

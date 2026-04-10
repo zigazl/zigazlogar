@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { siteContent } from "@/data/site-content";
 
 export const size = {
   width: 1200,
@@ -41,12 +42,12 @@ export default function OpenGraphImage() {
           }}
         >
           <div style={{ display: "flex", letterSpacing: "0.24em", fontSize: 20, textTransform: "uppercase", color: "#6b7b92" }}>
-            IT Project Manager · Business Analyst · Solution Architect
+            {siteContent.hero.eyebrow}
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: "18px", maxWidth: 760 }}>
-            <div style={{ fontSize: 78, fontWeight: 700, lineHeight: 1 }}>Ziga Zlogar</div>
+            <div style={{ fontSize: 78, fontWeight: 700, lineHeight: 1 }}>{siteContent.hero.name}</div>
             <div style={{ fontSize: 36, lineHeight: 1.2, color: "#5a6b82" }}>
-              Turning enterprise complexity into responsible digital systems
+              {siteContent.hero.headline}
             </div>
           </div>
         </div>
