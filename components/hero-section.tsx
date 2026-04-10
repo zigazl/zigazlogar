@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
+import Image from "next/image";
 
 import { EarthVisual } from "@/components/earth-visual";
 
@@ -37,12 +38,24 @@ export function HeroSection({ hero, techStack }: HeroProps) {
             <div className="relative z-10 overflow-hidden rounded-[28px] border border-sky-500/10 bg-[linear-gradient(180deg,rgba(13,24,45,0.8),rgba(8,16,36,0.9))] p-4 md:rounded-[32px] md:p-7">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(56,189,248,0.08),transparent_34%),radial-gradient(circle_at_bottom_right,rgba(14,165,233,0.06),transparent_32%)]" />
               <div className="relative space-y-4 md:space-y-5">
-                <div className="overflow-hidden rounded-[26px] border border-sky-500/15 bg-slate-900 shadow-[0_24px_44px_rgba(0,0,0,0.5),0_0_0_1px_rgba(56,189,248,0.06)] ring-1 ring-sky-900/50 md:rounded-[30px]">
-                  <img
+                <div className="relative aspect-[4/4.2] overflow-hidden rounded-[26px] border border-sky-500/15 bg-slate-950 shadow-[0_24px_44px_rgba(0,0,0,0.6),0_0_0_1px_rgba(56,189,248,0.08)] ring-1 ring-sky-900/40 md:aspect-[4/4.6] md:rounded-[30px]">
+                  <Image
                     src={hero.profileImage}
                     alt="Portrait of Žiga Žlogar"
-                    className="aspect-[4/4.2] w-full object-cover object-center md:aspect-[4/4.6]"
-                    loading="eager"
+                    fill
+                    sizes="(max-width: 768px) 90vw, (max-width: 1024px) 40vw, 460px"
+                    priority
+                    className="object-cover object-center"
+                  />
+                  {/* Subtle scanline overlay */}
+                  <div
+                    aria-hidden="true"
+                    className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,transparent_0%,rgba(2,5,16,0.08)_50%,transparent_100%)] mix-blend-overlay"
+                  />
+                  {/* Top neon shimmer */}
+                  <div
+                    aria-hidden="true"
+                    className="pointer-events-none absolute inset-x-0 top-0 h-12 bg-[linear-gradient(180deg,rgba(56,189,248,0.18),transparent)]"
                   />
                 </div>
                 <div className="rounded-[22px] border border-sky-500/10 bg-slate-900/60 px-4 py-3 backdrop-blur-sm md:rounded-[24px] md:px-5 md:py-4">
