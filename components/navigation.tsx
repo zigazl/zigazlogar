@@ -23,7 +23,6 @@ function useActiveSection() {
       (entries) => {
         const visible = entries.filter((e) => e.isIntersecting);
         if (visible.length > 0) {
-          // pick the topmost visible section
           const topmost = visible.reduce((a, b) =>
             a.boundingClientRect.top < b.boundingClientRect.top ? a : b
           );
@@ -49,10 +48,10 @@ export function Navigation() {
       initial={reduceMotion ? undefined : { opacity: 0, y: -20 }}
       animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-      className="sticky top-0 z-50 border-b border-slate-200/80 bg-[rgba(252,253,255,0.86)] backdrop-blur-2xl"
+      className="sticky top-0 z-50 border-b border-sky-500/10 bg-[rgba(5,12,26,0.88)] backdrop-blur-2xl"
     >
       <div className="shell flex items-center justify-between gap-4 py-3 md:py-4">
-        <a href="#hero" className="font-display text-sm font-semibold uppercase tracking-[0.26em] text-text">
+        <a href="#hero" className="font-mono text-sm font-semibold uppercase tracking-[0.26em] text-accent">
           ZZ
         </a>
         <nav aria-label="Primary" className="hidden items-center gap-7 lg:flex">
@@ -60,8 +59,8 @@ export function Navigation() {
             <a
               key={href}
               href={href}
-              className={`text-sm transition-colors duration-300 hover:text-text ${
-                activeSection === href ? "font-semibold text-text" : "text-muted"
+              className={`text-sm transition-colors duration-300 hover:text-accent ${
+                activeSection === href ? "font-semibold text-accent" : "text-muted"
               }`}
             >
               {label}
@@ -83,8 +82,8 @@ export function Navigation() {
               href={href}
               className={`inline-flex min-h-10 items-center rounded-full border px-4 text-sm transition-colors duration-300 ${
                 activeSection === href
-                  ? "border-accent/50 bg-accent/10 font-semibold text-accentDeep"
-                  : "border-slate-200 bg-white/90 text-muted hover:border-accent/50 hover:text-text"
+                  ? "border-accent/40 bg-accent/10 font-semibold text-accent"
+                  : "border-sky-500/15 bg-sky-950/20 text-muted hover:border-accent/30 hover:text-text"
               }`}
             >
               {label}

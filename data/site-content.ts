@@ -34,7 +34,13 @@ export const siteContent = {
       "What matters most to me is usefulness. I’m interested in digital solutions that fit real work, reduce friction, and stay valuable over time.",
     ],
   },
+  techStack: ["Next.js", "TypeScript", "React", "Node.js", "Tailwind CSS", "Python"],
   whatIDo: [
+    {
+      title: "Software Development",
+      description:
+        "Building software is something I genuinely love. I work with Next.js, TypeScript, React, and Node.js — and I’m constantly learning more. I enjoy the whole process: thinking through architecture, writing clean code, and seeing something actually run in production.",
+    },
     {
       title: "IT Project Coordination",
       description:
@@ -59,11 +65,6 @@ export const siteContent = {
       title: "Data and Reporting",
       description:
         "I use reporting, analytics, and structured information to support clearer visibility and more informed decisions.",
-    },
-    {
-      title: "Software Development",
-      description:
-        "I’m enthusiastic about software development and enjoy learning how systems are built in practice. I like improving my coding skills and understanding how software solutions come together from both a technical and business perspective.",
     },
   ],
   experience: [

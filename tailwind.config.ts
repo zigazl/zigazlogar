@@ -9,27 +9,29 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        canvas: "#f5f7fb",
-        surface: "#ffffff",
-        line: "rgba(72, 92, 118, 0.12)",
-        text: "#1a2533",
-        muted: "#637285",
-        accent: "#8aa7d1",
-        accentDeep: "#4f6790",
-        accentBlue: "#b8cbe6",
+        canvas: "#050c1a",
+        surface: "#0d1829",
+        line: "rgba(56, 189, 248, 0.1)",
+        text: "#e2e8f0",
+        muted: "#94a3b8",
+        accent: "#38bdf8",
+        accentDeep: "#0ea5e9",
+        accentBlue: "#7dd3fc",
       },
       boxShadow: {
-        soft: "0 24px 60px rgba(33, 48, 61, 0.08)",
+        soft: "0 24px 60px rgba(0, 0, 0, 0.5)",
+        glow: "0 0 40px rgba(56, 189, 248, 0.18)",
       },
       backgroundImage: {
         "hero-glow":
-          "radial-gradient(circle at 15% 15%, rgba(138, 167, 209, 0.18), transparent 32%), radial-gradient(circle at 85% 0%, rgba(184, 203, 230, 0.18), transparent 26%), linear-gradient(180deg, #fcfdff, #f3f6fb)",
+          "radial-gradient(circle at 20% 20%, rgba(56,189,248,0.09), transparent 40%), radial-gradient(circle at 80% 5%, rgba(14,165,233,0.07), transparent 35%), linear-gradient(180deg, #050c1a 0%, #08132a 100%)",
         grid:
-          "linear-gradient(rgba(99, 114, 133, 0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(99, 114, 133, 0.08) 1px, transparent 1px)",
+          "linear-gradient(rgba(56,189,248,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(56,189,248,0.05) 1px, transparent 1px)",
       },
       fontFamily: {
         sans: ["Avenir Next", "Segoe UI", "Helvetica Neue", "Arial", "sans-serif"],
         display: ["Optima", "Avenir Next", "Segoe UI", "sans-serif"],
+        mono: ["ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "monospace"],
       },
       maxWidth: {
         content: "1200px",
