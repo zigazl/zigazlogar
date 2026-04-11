@@ -1,17 +1,24 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 
 import "./globals.css";
 import { siteContent } from "@/data/site-content";
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#020510",
+  colorScheme: "dark",
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://example.com"),
-  title: "Žiga Žlogar | Responsible Digital Transformation",
+  title: "Žiga Žlogar | IT Project Manager & Developer",
   description:
-    "Premium personal positioning website for Žiga Žlogar, an IT Project Manager, Business Analyst, and Solution Architect focused on responsible digitalization and long-term enterprise value.",
+    "Personal website of Žiga Žlogar — IT Project Manager, Business Analyst, and Solution Architect who loves building software and digital systems that actually work.",
   openGraph: {
-    title: "Žiga Žlogar | Responsible Digital Transformation",
+    title: "Žiga Žlogar | IT Project Manager & Developer",
     description:
-      "Structured, scalable enterprise digital systems shaped through project leadership, business analysis, and solution architecture.",
+      "Building software and digital systems through project leadership, business analysis, and solution architecture.",
     type: "website",
     url: "https://example.com",
     images: [
@@ -19,15 +26,15 @@ export const metadata: Metadata = {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "Žiga Žlogar personal positioning website",
+        alt: "Žiga Žlogar — personal website",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Žiga Žlogar | Responsible Digital Transformation",
+    title: "Žiga Žlogar | IT Project Manager & Developer",
     description:
-      "IT Project Manager, Business Analyst, and Solution Architect focused on responsible digitalization.",
+      "IT Project Manager, Business Analyst, and Solution Architect — enthusiastic about software development and building practical systems.",
     images: ["/opengraph-image"],
   },
 };

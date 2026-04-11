@@ -13,12 +13,17 @@ import { siteContent } from "@/data/site-content";
 export default function Home() {
   return (
     <div className="relative min-h-screen overflow-x-clip bg-canvas">
+      {/* Ambient glow layers */}
       <div className="pointer-events-none absolute inset-0 bg-hero-glow" />
-      <div className="pointer-events-none absolute inset-0 bg-grid bg-[size:120px_120px] opacity-[0.08]" />
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-[34rem] bg-[radial-gradient(circle_at_top,rgba(138,167,209,0.14),transparent_50%)]" />
+      {/* Tech grid */}
+      <div className="pointer-events-none absolute inset-0 bg-grid bg-[size:80px_80px] opacity-[0.6]" />
+      {/* Top radial glow */}
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-[40rem] bg-[radial-gradient(ellipse_at_top,rgba(56,189,248,0.08),transparent_55%)]" />
+      {/* Bottom fade */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-canvas to-transparent" />
       <Navigation />
       <main className="relative z-10">
-        <HeroSection hero={siteContent.hero} />
+        <HeroSection hero={siteContent.hero} techStack={siteContent.techStack} />
         <IntroSection intro={siteContent.intro} />
         <StatementSection statement={siteContent.statements.first} />
         <AboutSection about={siteContent.about} />

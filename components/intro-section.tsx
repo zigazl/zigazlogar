@@ -13,6 +13,7 @@ export function IntroSection({ intro }: IntroProps) {
       <div className="section-divider" />
       <Reveal className="mx-auto max-w-4xl">
         <div className="panel px-6 py-11 md:px-16 md:py-20">
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(56,189,248,0.06),transparent_40%)]" />
           <span className="eyebrow">A Quick Introduction</span>
           <h2 className="max-w-[10ch] font-display text-[2.2rem] font-semibold tracking-[-0.05em] text-text md:max-w-none md:text-[3.5rem]">
             {intro.title}
