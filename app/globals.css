@@ -94,7 +94,7 @@ a {
   }
 
   .btn-ghost {
-    @apply inline-flex min-h-12 items-center justify-center rounded-full border border-accent/20 bg-accent/8 px-6 py-3.5 text-sm font-semibold text-accent transition-all duration-300 hover:border-accent/40 hover:bg-accent/12;
+    @apply inline-flex min-h-12 items-center justify-center rounded-full border border-accent/20 bg-accent/10 px-6 py-3.5 text-sm font-semibold text-accent transition-all duration-300 hover:border-accent/40 hover:bg-accent/15;
   }
 
   .interactive-card {
@@ -114,7 +114,7 @@ a {
   }
 
   .tech-badge {
-    @apply inline-flex items-center rounded-full border border-accent/22 bg-accent/6 px-3 py-1 font-mono text-[11px] tracking-wide text-accent;
+    @apply inline-flex items-center rounded-full border border-accent/20 bg-accent/5 px-3 py-1 font-mono text-[11px] tracking-wide text-accent;
   }
 }
 
